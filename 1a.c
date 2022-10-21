@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 
 	if( argc == 2) {
 		printf("%s\n",argv[1]);
-		strcpy(buf,argv[1]);
+		strncpy(buf,argv[1],30); // Make sure we don't copy more than the buffer can hold.
 	} else {
 		strcpy(buf,"what can possibly go wrong?");
 	}
